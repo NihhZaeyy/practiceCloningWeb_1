@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    /* ========== Typography and Styles ============ */
+
+    /* ========== Font ============ */
+    --font-family: 'Poppins', sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --font-smaller-size: 0.813rem;
+    --font-small-size: 1rem;
+    --font-medium-size: 1.25rem;
+    --font-big-size: 3.8rem;
+
+    /* ========== Colors ============ */
+
+    --color-primary: #fff;
+    --color-secondary: #FFCC00;
+    --color-basic: black;
+    
+}
+#home {
+    max-height: 100vh;
+    background: url(/Assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container__nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    height: 10vh;
+    z-index: 10;
+    position: relative;
+}
+
+/* ========== CSS for left navbar ============ */
+.logo {
+    width: 5.5rem;
+}
+
+/* ========== CSS for middle navbar ============ */
+.nav__content {
+    width: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__items {
+    display: flex;
+}
+
+.nav__list {
+    padding: 0 2vh;
+}
+
+.nav__list-link {
+    font-family: var(--font-family);
+    font-size: var(--font-small-size);
+    font-weight: var(--font-weight-medium);
+
+}
+
+.nav__list-link:hover 
+
+/* ========== CSS for right navbar ============ */
+
+.nav__button {
+    display: flex;
+    justify-content: center;
+}
+
+/* ========== CSS for main__title ============ */
+.main__content {
+    width: 600px;
+    height: 100vh;
+    padding-top: 40px;
+    margin-left: 9rem;
+    
+}
+
+.main__title {
+    height: 325px;
+}
+
+.main__title-text, .main__title-desc {
+    font-family: var(--font-family);
+}
+
+.main__title-text {
+    font-size: var(--font-big-size);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    opacity: 0.8;
+}
+/* ========== CSS for main__form ============ */
+
+.main__form {
+    display: flex;
+    height: 50px;
+}
+.main__form-input {
+   width: 350px ;
+   border-radius: 50px;
+   border: 1px solid black;
+
+}
+
+.form-btn {
+    padding: 0.75rem;
+}
+
+.main__form-btn {
+    margin-left: -109px;
+    margin-top: 1px;
+    height: 50px;
+}
+
+.nav__button-2 {
+    display: flex;
+}
+.nav__button-acc2 {
+    display: none;
+
+} 
+
+
+
+.form-btn {
+    background-color: var(--color-secondary);
+    color: rgb(0, 0, 0, 0.8);
+} 
+
+/* ========== CSS for main__status ============ */
+
+.status__cards {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status__card {
+    width: 180px;
+    display: flex;
+    padding: 10px;
+    box-shadow: 10px 10px 10px 10px rgb(128, 128, 128, 0.18);
+    border-radius: 10px;
+}
+
+.status__card:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card__logo {
+    width: 2.5rem;
+    margin-left: 5px;
+}
+
+.status__card-info{
+    margin-left: 15px;
+}
+
+.card__info-total{
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-medium-size);
+}
+
+.card__info-title, .card__info-progress{
+    font-size: var(--font-smaller-size);
+}
+
+.card__info-title, .card__info-total, .card__info-progress {
+    font-family: var(--font-family);
+}
+
+/* ========== CSS for Privilage ID section ============ */
+
+#privilage {
+    padding-top: 10rem;
+    height: 100vh;
+    background:url(./Assets/background-2.png);
+}
+
+.privilage__cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.privilage__card {
+    width: 250px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.privilage__logo {
+    width: 8rem;
+}
+
+.privilage__text {
+    font-family: var(--font-family);
+    font-size: var(--font-small-size);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* ========== CSS for Media Query ============ */
+
+@media only screen and (max-width:1100px) {
+    #home {
+        background-position-x: 80px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #home {
+        background-position-x: 100px;
+    }
+
+    .container__nav {
+        margin: 10px 30px;
+    }
+
+    .main__title {
+        height: 250px;
+        position: relative;
+        bottom: 100px;
+    }
+
+    .main__form, .status__cards {
+        position: relative;
+        bottom: 60px;
+    }
+
+    .nav__content {
+        width: 300px;
+    }
+
+    .main__content {
+        width: auto;
+        height: 700px;
+        margin: 0 30px;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title-text, .main__title-desc {
+        text-align: center;
+    }
+
+    .nav__button-acc {
+        display: none;
+    }
+
+    .nav__button-acc2 {
+        display: block;
+    }
+
+    .status__cards {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:660px) {
+
+    #home {
+        height: 700px;
+
+    }
+    .container__nav {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+    }
+
+    .nav__button {
+        display: flex;
+    }
+
+    .nav__button-acc {
+        display: block;
+
+    }
+
+    .nav__content {
+        display: none;
+    }
+
+    .nav__button-acc2 {
+        display: none;
+    }
+
+    .main__content {
+        position: relative;
+        top: 120px;
+        margin-top: 40px;
+    }
+
+    .main__title-text {
+        font-size: 2.8rem;
+        margin-top: -30px;
+    }
+
+    .main__form-btn {
+        margin-left: -7.25rem;
+    }
+
+    .form-btn {
+        width: 115px;
+    }
+
+    .status__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .status__card {
+        margin-top: 40px;
+    }
+    
+    #privilage {
+        height: 1000px;
+        padding: 0;
+        position: relative;
+        top: 400px;
+        margin-top:40px ;
+    }
+
+    .privilage__cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .privilage__card {
+        margin-top: 30px;
+    }
+
+    .privilage__text {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .main__title {
+        bottom: 70px;
+    }
+
+    .main__form{
+        bottom: 0px;
+
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .main__form {
+        top: 20px;
+        width: 300px;
+    }
+
+    .form-btn {
+        width: 100px;
+        font-size: 12px;
+        margin-left: 15px;
+        padding: 15px;
+    }
+
+    .privilage__logo {
+        width: 100px;
+    }
+
+    .privilage__text {
+        font-size: var(--font-smaller-size);
+    }
+}
